@@ -134,6 +134,7 @@
   z-index: 2;
 }
 
+
 .avatar-ring {
   width: 88px;
   height: 88px;
@@ -227,21 +228,27 @@
 }
 
 .float-card-tl {
-  top: 60px;
-  left: -30px;
+  top: 130px;
+  left: -80px;
   animation-delay: 0s;
 }
 
 .float-card-br {
-  bottom: 50px;
-  right: -20px;
+  bottom: 70px;
+  right: -70px;
   animation-delay: 1.5s;
 }
 
 .float-card-tm {
-  top: 0;
-  right: 10px;
+  top: -32px;
+  right: -20px;
   animation-delay: 0.8s;
+}
+
+@media (max-width: 1024px) {
+  .float-card-tl { left: -24px; }
+  .float-card-br { right: -16px; }
+  .float-card-tm { right: 0; top: -24px; }
 }
 
 @keyframes float-y {

@@ -31,7 +31,7 @@ export function initHero() {
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
             Lihat portofolio
           </a>
-          <a href="/cv-rio-vincent.pdf" download class="btn btn-ghost">
+          <a href="#contact" class="btn btn-ghost" id="cv-btn">
             <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
             Download CV
           </a>
@@ -49,11 +49,6 @@ export function initHero() {
           </div>
           <div class="hero-stat-divider"></div>
           <div class="hero-stat">
-            <div class="hero-stat-num">KKN</div>
-            <div class="hero-stat-label">2026</div>
-          </div>
-          <div class="hero-stat-divider"></div>
-          <div class="hero-stat">
             <div class="hero-stat-num">UNRI</div>
             <div class="hero-stat-label">FEB</div>
           </div>
@@ -66,13 +61,12 @@ export function initHero() {
 
         <div class="glass avatar-card">
           <div class="avatar-ring">RV</div>
-          <div class="avatar-name">Rio Vincent P. Sirait</div>
+          <div class="avatar-name">Rio Vincent Paulus Sirait</div>
           <div class="avatar-role">Manajemen · Web Dev · Trader</div>
           <div class="avatar-tags">
             <span class="avatar-tag">Marketing</span>
             <span class="avatar-tag">Web dev</span>
             <span class="avatar-tag">XAUUSD</span>
-            <span class="avatar-tag">KKN 2026</span>
             <span class="avatar-tag">UMKM</span>
           </div>
         </div>

@@ -132,11 +132,20 @@ export function initBlog() {
 //  CONTACT SECTION
 // ============================================
 
+const ICONS = {
+  instagram: '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>',
+  tiktok:    '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M19.59 6.69a4.83 4.83 0 0 1-3.77-4.25V2h-3.45v13.67a2.89 2.89 0 0 1-5.2 1.74 2.89 2.89 0 0 1 2.31-4.64 2.93 2.93 0 0 1 .88.13V9.4a6.84 6.84 0 0 0-1-.05A6.33 6.33 0 0 0 5.8 20.1a6.34 6.34 0 0 0 10.86-4.43V8.66a8.16 8.16 0 0 0 5.69 1.69V6.92a4.79 4.79 0 0 1-2.76-.23z"/></svg>',
+  linkedin:  '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.95v5.66H9.34V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.8 0 0 .77 0 1.72v20.56C0 23.23.8 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>',
+  github:    '<svg viewBox="0 0 24 24" width="20" height="20" fill="currentColor"><path d="M12 .3a12 12 0 0 0-3.8 23.4c.6.1.8-.3.8-.6v-2c-3.3.7-4-1.6-4-1.6-.5-1.4-1.3-1.8-1.3-1.8-1.1-.7.1-.7.1-.7 1.2.1 1.8 1.2 1.8 1.2 1.1 1.8 2.8 1.3 3.5 1 .1-.8.4-1.3.8-1.6-2.7-.3-5.5-1.3-5.5-6 0-1.2.5-2.3 1.3-3.1-.2-.4-.6-1.6 0-3.2 0 0 1-.3 3.4 1.2a11.5 11.5 0 0 1 6 0c2.3-1.5 3.3-1.2 3.3-1.2.7 1.6.2 2.9 0 3.2.9.8 1.3 1.9 1.3 3.1 0 4.6-2.8 5.6-5.5 5.9.5.4.9 1 .9 2.2v3.3c0 .3.1.7.8.6A12 12 0 0 0 12 .3"/></svg>',
+  email:     '<svg viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>',
+};
+
 const socials = [
-  { icon: '📸', name: 'Instagram',  handle: '@riovincent_',    href: 'https://instagram.com', color: '#ff6b9d' },
-  { icon: '💼', name: 'LinkedIn',   handle: 'Rio Vincent Sirait', href: 'https://linkedin.com', color: '#00d4ff' },
-  { icon: '🐙', name: 'GitHub',     handle: 'github.com/riovincent', href: 'https://github.com', color: 'rgba(255,255,255,0.7)' },
-  { icon: '✉️', name: 'Email',      handle: 'rio@email.com',   href: 'mailto:rio@email.com', color: '#7c6ff7' },
+  { key: 'instagram', name: 'Instagram', handle: '@rio_vnct',                    href: 'https://instagram.com/rio_vnct' },
+  { key: 'tiktok',    name: 'TikTok',    handle: '@riovnct',                     href: 'https://tiktok.com/@riovnct' },
+  { key: 'linkedin',  name: 'LinkedIn',  handle: 'Rio Vincent Sirait',           href: 'https://linkedin.com' },
+  { key: 'github',    name: 'GitHub',    handle: 'github.com/riovincent',        href: 'https://github.com/riovincent' },
+  { key: 'email',     name: 'Email',     handle: 'rio.vincent.paulus@gmail.com', href: 'mailto:rio.vincent.paulus@gmail.com' },
 ];
 
 export function initContact() {
@@ -204,7 +213,7 @@ export function initContact() {
             <div class="social-links">
               ${socials.map(s => `
                 <a href="${s.href}" target="_blank" rel="noopener" class="social-link">
-                  <span class="social-icon">${s.icon}</span>
+                  <span class="social-icon social-icon-${s.key}">${ICONS[s.key]}</span>
                   <span class="social-name">${s.name}</span>
                   <span class="social-handle">${s.handle}</span>
                   <span class="social-arrow">↗</span>
